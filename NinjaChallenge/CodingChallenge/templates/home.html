@@ -20,33 +20,14 @@
 </head>
 <script type="text/javascript">
     $(document).ready(function() {
-        if (window.location.href.indexOf('reload') > 0) {
-            $("#ex1").show();
-            $("#play").hide();
-            $("#img-title").hide();
-        }
         $(".bar").each(function() {
             $(this).find(".bar-inner").animate({
                 width: $(this).attr("data-width")
             }, 2000)
         });
-
-        $("#play").click(function() {
-            $("#ex1").show();
-            $("#play").hide();
-            $("#img-title").hide();
-        })
-
-        $("#close").click(function() {
-            $("#ex1").hide();
-            $("#play").show();
-            $("#img-title").show();
-        })
-
         $("#new").click(function() {
-            window.location.href = "?reload";
+            window.location.reload();
         })
-
     })
 </script>
 
